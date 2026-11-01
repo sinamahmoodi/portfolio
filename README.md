@@ -8,12 +8,6 @@ Built with a focus on **performance, accessibility, maintainability, and thought
 
 ---
 
-## ✨ Preview
-
-<!-- Replace this with your portfolio screenshot -->
-![Portfolio Preview](./public/images/portfolio-preview.png)
-
----
 
 ## 🚀 Tech Stack
 
@@ -49,13 +43,13 @@ Follow these steps to run the project locally.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone(https://github.com/sinamahmoodi/portfolio.git)
 ```
 
 ### 2. Navigate to the project directory
 
 ```bash
-cd YOUR_REPOSITORY
+cd portfolio
 ```
 
 ### 3. Install dependencies
