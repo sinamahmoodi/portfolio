@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✦ Personal Portfolio
 
-## Getting Started
+### A modern developer portfolio built with Next.js, TypeScript & Tailwind CSS.
 
-First, run the development server:
+A minimal, dark-themed portfolio designed to showcase my work, technical skills, experience, and passion for building clean, responsive, and user-friendly web experiences.
+
+Built with a focus on **performance, accessibility, maintainability, and thoughtful UI design.**
+
+---
+
+## ✨ Preview
+
+<!-- Replace this with your portfolio screenshot -->
+![Portfolio Preview](./public/images/portfolio-preview.png)
+
+---
+
+## 🚀 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js | React framework & application structure |
+| React | Component-based UI |
+| TypeScript | Type-safe development |
+| Tailwind CSS | Utility-first styling |
+| React Server Components | Efficient rendering |
+| Git & GitHub | Version control |
+
+---
+
+## 🎨 Features
+
+- **Modern Dark UI** — Minimal design with a clean visual identity.
+- **Responsive Layout** — Optimized for desktop, tablet, and mobile.
+- **Interactive Hero Section** — Developer-inspired code editor interface.
+- **Projects Showcase** — A dedicated space for featured projects.
+- **Skills Section** — Overview of technologies and tools.
+- **About Me** — A quick introduction and professional background.
+- **Contact Section** — Easy ways to get in touch.
+- **Reusable Components** — Organized and maintainable component architecture.
+- **Smooth Navigation** — Simple and intuitive browsing experience.
+
+---
+
+## 🛠️ Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd YOUR_REPOSITORY
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+http://localhost:3000
+```
 
-## Learn More
+That's it! The portfolio should now be running locally.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+.
+├── app/
+│   ├── components/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   └── ui/
+│
+├── data/
+│   ├── personal.ts
+│   └── skills.ts
+│
+├── public/
+│   ├── fonts/
+│   ├── images/
+│   └── icons/
+│
+├── package.json
+└── README.md
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can customize the portfolio with your own information:
+
+- Update personal information in `data/personal.ts`.
+- Modify your technology stack in `data/skills.ts`.
+- Add or update projects in the relevant project data file.
+- Replace images and assets inside the `public/` directory.
+- Adjust colors, typography, and layout using Tailwind CSS and `app/globals.css`.
+
+---
+
+## 👨‍💻 About Me
+
+I'm a Front-End Developer passionate about building modern web applications with **React, Next.js, and TypeScript**.
+
+I enjoy turning ideas into polished digital experiences, writing maintainable code, and continuously improving my development skills.
+
+---
+
+## 📬 Connect With Me
+
+- **GitHub:** [sina mahmoodi](https://github.com/sinamahmoodiE)
+- **Portfolio:** [sina mahmoodi](www.sinamahmoodi.ir)
+- **Email:** mahmodi.sina.s@gmail.com
+
+---
+
+<p align="center">
+  Designed & Built with ☕ and passion.
+  <br />
+  <strong>© 2026 — Sina Mahmoodi</strong>
+</p>
