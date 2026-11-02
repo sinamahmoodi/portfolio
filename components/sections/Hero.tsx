@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import Badge from "@/components/ui/Badge";
@@ -44,7 +43,7 @@ function ArrowUpRight() {
 /* Code editor window */
 function CodeWindow() {
   return (
-    <div className="relative mx-auto w-full max-w-[540px] lg:translate-y-3">
+    <div className="relative mx-auto w-full max-w-[560px] lg:translate-y-3">
 
       {/* Green background glow */}
       <div className="pointer-events-none absolute -inset-8 hidden rounded-[2rem] bg-[radial-gradient(circle_at_85%_45%,rgba(74,222,128,0.13),transparent_55%)] lg:block" />
@@ -204,66 +203,71 @@ function Fn({ children }: { children: React.ReactNode }) {
 /* Hero section */
 export default function Hero() {
   return (
-    <section className="mx-auto grid w-full max-w-[1150px] items-center gap-16 px-6 py-16 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:py-20">
+    // Outer wrapper: fills the viewport and vertically centers the content.
+    // If you have a fixed/sticky navbar, use min-h-[calc(100svh-4rem)]
+    // (replace 4rem with your navbar height).
+    <section className="flex min-h-svh items-center">
+      <div className="mx-auto grid w-full max-w-[1216px] items-center gap-16 px-6 py-16 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:py-20">
 
-      {/* Left content */}
-      <div className="min-w-0">
+        {/* Left content */}
+        <div className="min-w-0">
 
-        {/* Availability status */}
-        <p className="mb-6 flex items-center gap-2 text-[11px] font-semibold tracking-[0.18em] text-[#4ade80] uppercase">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#4ade80]" />
-          {personal.status}
-        </p>
+          {/* Availability status */}
+          <p className="mb-6 flex items-center gap-2 text-[11px] font-semibold tracking-[0.18em] text-[#4ade80] uppercase xl:text-xs">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#4ade80]" />
+            {personal.status}
+          </p>
 
-        {/* Main title */}
-        <h1 className="max-w-[620px] text-[36px] leading-[1.08] font-semibold tracking-[-0.035em] text-white sm:text-[56px] lg:text-[64px] lg:leading-[1.1]">
-          Building modern{" "}
-          <br className="hidden sm:block" />
-          web experiences{" "}
-          <br className="hidden sm:block" />
-          with <span className="text-[#4ade80]">React</span>
-          <span className="text-white"> &amp; </span>
-          <br className="hidden sm:block" />
-          TypeScript.
-        </h1>
+          {/* Main title */}
+          <h1 className="max-w-[620px] text-[36px] leading-[1.08] font-semibold tracking-[-0.035em] text-white sm:text-[56px] lg:text-[64px] lg:leading-[1.1] xl:text-[68px]">
+            Building modern{" "}
+            <br className="hidden sm:block" />
+            web experiences{" "}
+            <br className="hidden sm:block" />
+            with <span className="text-[#4ade80]">React</span>
+            <span className="text-white"> &amp; </span>
+            <br className="hidden sm:block" />
+            TypeScript.
+          </h1>
 
-        {/* Description */}
-        <p className="mt-6 max-w-[540px] text-[15px] leading-[30px] text-pretty text-[#9a9aa3]">
-          {personal.summary}
-        </p>
+          {/* Description */}
+          <p className="mt-6 max-w-[540px] text-[15px] leading-[30px] text-pretty text-[#9a9aa3] xl:max-w-[600px] xl:text-[18px] xl:leading-8">
+            {personal.summary}
+          </p>
 
-        {/* Buttons */}
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <Button href="#projects">
-            View Projects
-            <ArrowRight />
-          </Button>
+          {/* Buttons */}
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Button href="#projects">
+              View Projects
+              <ArrowRight />
+            </Button>
 
-          <Button href={personal.githubUrl} variant="outline" external>
-            <GithubIcon className="h-4 w-4" />
-            View GitHub
-            <ArrowUpRight />
-          </Button>
+            <Button href={personal.githubUrl} variant="outline" external>
+              <GithubIcon className="h-4 w-4" />
+              View GitHub
+              <ArrowUpRight />
+            </Button>
+          </div>
+
+          {/* Technology stack */}
+          <ul className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3">
+            {heroStack.map((item) => (
+              <li
+                key={item}
+                className="flex items-center gap-1.5 text-[12px] text-white/40"
+              >
+                <span className="font-mono text-[#4ade80]">
+                  {"{ }"}
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Technology stack */}
-        <ul className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3">
-          {heroStack.map((item) => (
-            <li
-              key={item}
-              className="flex items-center gap-1.5 text-[12px] text-white/40"
-            >
-              <span className="font-mono text-[#4ade80]">
-                {"{ }"}
-              </span>
-              {item}
-            </li>
-          ))}
-        </ul>
+        {/* Right code editor */}
+        <CodeWindow />
       </div>
-
-      {/* Right code editor */}
-      <CodeWindow />
     </section>
   );
 }

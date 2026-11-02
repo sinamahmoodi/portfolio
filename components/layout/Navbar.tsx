@@ -6,7 +6,7 @@ import { personal } from "@/data/personal";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-black">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-5 md:px-10">
         <Link href="/" className="text-[15px] font-semibold tracking-tight text-white">
           {personal.name}
