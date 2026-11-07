@@ -31,7 +31,8 @@ button:active {
 }
 
 html {
-  scroll-behavior: smooth;
+  color-scheme: dark;  
+  scroll-behavior: smooth;  
   overflow-x: hidden;
 }
 
@@ -44,4 +45,31 @@ body {
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
   background-size: 72px 72px;
   background-attachment: fixed;
+}
+
+@supports (-moz-appearance: none) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255 255 255 / 0.2) transparent;
+  }
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050508; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 0.15);
+  border-radius: 999px;
+  border: 2px solid #050508;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4ade80; 
 }

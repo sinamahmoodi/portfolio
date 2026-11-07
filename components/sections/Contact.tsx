@@ -34,13 +34,13 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "#", // TODO: your LinkedIn URL
+    href: "https://www.linkedin.com/in/sina-mahmoudi-1126b1308?utm_source=share_via&utm_content=profile&utm_medium=member_ios" , 
     external: true,
     icon: <LinkedinIcon />,
   },
   {
     label: "Email",
-    href: "mailto:you@example.com", // TODO: your email address
+    href: "mailto:mahmodi.sina.s@gmail.com",
     external: false,
     icon: <Mail size={16} aria-hidden="true" />,
   },

@@ -47,9 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${Manrope.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">
-        <MainLayout>{children}</MainLayout>
-      </body>
+      <body className="flex min-h-full flex-col font-sans">{children}</body>
     </html>
   );
 }

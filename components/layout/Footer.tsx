@@ -13,8 +13,8 @@ type FooterLink = {
 
 const links: FooterLink[] = [
   { label: "GitHub", href: personal.githubUrl },
-  { label: "LinkedIn", href: "#" }, // TODO: your LinkedIn URL
-  { label: "Email coming soon" }, // TODO: set href "mailto:..." and rename to "Email"
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sina-mahmoudi-1126b1308?utm_source=share_via&utm_content=profile&utm_medium=member_ios" }, // TODO: your LinkedIn URL
+  { label: "Email", href: "mailto:mahmodi.sina.s@gmail.com" }, 
 ];
 
 const Footer = () => {
@@ -63,7 +63,8 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-9 border-t border-[#28282c] pt-[22px]">
           <p className="text-xs text-zinc-500">
-            © {new Date().getFullYear()} {name}. All rights reserved.
+            {/* © {new Date().getFullYear()} {name}. All rights reserved. */}
+              © 2026 {name}. All rights reserved.
           </p>
         </div>
       </div>
