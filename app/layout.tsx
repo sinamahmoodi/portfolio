@@ -76,29 +76,50 @@ export const metadata: Metadata = {
   },
 };
 
-const personJsonLd = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": `${siteUrl}/#person`,
-  name: siteName,
-  url: siteUrl,
-  jobTitle: "Front-End Engineer",
-  description:
-    "Front-End Engineer specializing in React, Next.js, TypeScript, and maintainable web application architecture.",
-  knowsAbout: [
-    "Front-End Engineering",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "Web Accessibility",
-    "Responsive Web Design",
-    "UI Architecture",
-    "API Integration",
-  ],
-  sameAs: [
-    "https://github.com/sinamahmoodi",
-    "https://www.linkedin.com/in/sina-mahmoudi-1126b1308",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      inLanguage: "en",
+      publisher: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profile`,
+      url: siteUrl,
+      name: "Sina Mahmoodi | Front-End Engineer",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${siteUrl}/#person` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: siteName,
+      url: siteUrl,
+      jobTitle: "Front-End Engineer",
+      description:
+        "Front-End Engineer specializing in React, Next.js, TypeScript, and maintainable web application architecture.",
+      knowsAbout: [
+        "Front-End Engineering",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Web Accessibility",
+        "Responsive Web Design",
+        "UI Architecture",
+        "API Integration",
+      ],
+      sameAs: [
+        "https://github.com/sinamahmoodi",
+        "https://www.linkedin.com/in/sina-mahmoudi-1126b1308",
+      ],
+    },
   ],
 };
 
