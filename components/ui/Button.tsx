@@ -9,6 +9,7 @@ type ButtonProps = {
   variant?: ButtonVariant;
   external?: boolean;
   className?: string;
+  download?: boolean;
 };
 
 const variants: Record<ButtonVariant, string> = {
@@ -21,9 +22,11 @@ const variants: Record<ButtonVariant, string> = {
 
 export default function Button({
   href,
+  download,
   children,
   variant = "primary",
   external = false,
+
   className,
 }: ButtonProps) {
   const classes = cn(
@@ -34,7 +37,13 @@ export default function Button({
 
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a
+        href={href}
+        download={download}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+      >
         {children}
       </a>
     );
